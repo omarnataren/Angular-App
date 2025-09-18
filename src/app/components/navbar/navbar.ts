@@ -13,6 +13,7 @@ interface menuItem {
 export class Navbar {
   menuList: menuItem[] = [
     { name: 'Home', route: '/home' },
-    { name: 'About', route: '/acercade' }
+    { name: 'About', route: '/acercade' },
+    { name: 'Productos', route: '/productos' }
   ];
 }
