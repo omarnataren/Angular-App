@@ -10,24 +10,24 @@ interface Pokemon {
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [ ],
   templateUrl: './about.html',
   styleUrl: './about.css'
 })
 
 export class About {
-
-  heroes: string[] = ['Thor', 'Iron Man', 'Captain America'];
-
-  pokemon: Pokemon = {
-    name: 'charmander',
-    type: 'Fuego',
-    hp: 139,
-    activate: true,
-    velocidad: 100,
+  myName: string = 'Omar Alejandro Nataren Arredondo';
+  verInfo: boolean = false;
+  artistas: string[] = ['The Weeknd', 'Travis Scott', 'Drake', 'Bad Bunny', 'Kendrick Lamar'];
+  information = {
+    age: 20,
+    email: "omar@outlook.com",
+    phone: "9511714380",
+    nationality: "Mexican",
+    favorite_framework: "React"
   }
 
-  saludar() {
-    return `¡Hola! Soy ${this.pokemon.name}, un Pokémon de tipo ${this.pokemon.type}.`;
+  verInformation(): void {
+    this.verInfo = !this.verInfo;
   }
 }

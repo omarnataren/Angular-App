@@ -1,1 +1,30 @@
-<h1>About Us</h1>
+<div class="p-5 mb-4 bg-white rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">{{ myName }}</h1>
+        <p class="col-md-8 fs-4">
+            Soy ingeniero de software y me gusta programar en Angular.
+        </p>
+        <button class="btn btn-primary btn-md" type="button" (click)="verInformation()">
+            {{ verInfo ? 'Ver menos' : 'Ver más...' }}
+        </button>       
+    </div>
+</div>
+@if(verInfo){
+    <div class="bg-light">
+        <ul class="list-group list-group-flush ">
+            <li class="list-group-item">Edad: {{ information.age }}</li>
+            <li class="list-group-item">Email: {{ information.email }}</li>
+            <li class="list-group-item">Teléfono: {{ information.phone }}</li>
+            <li class="list-group-item">Nacionalidad: {{ information.nationality }}</li>
+            <li class="list-group-item">Framework favorito: {{ information.favorite_framework }}</li>
+        </ul>
+    </div>
+} 
+<h2>Mis artistas favoritos</h2>
+
+<ul>
+    @for(items of artistas; track $index) {
+        <li>Artista:{{ items }}</li>
+    }
+</ul>
+<hr>
